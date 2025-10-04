@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Stocker - Stock Market Website Template</title>
+    <title>Pro Premium Laptops - Sales & Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,17 +47,19 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <img src="img/PPL_Laptops_logo.png" alt="Logo">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+            <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="img/PPL_Laptops_logo.png" alt="Logo" class="ms-4">
+                <strong class="text-dark ms-4 fs-4">Pro Premium Laptop</strong>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="#" class="nav-item nav-link">About</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
                             <span class="dropdown-toggle">Sales</span>
@@ -69,16 +71,15 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                        <a href="service.html" class="nav-link" data-bs-toggle="dropdown">
                             <span class="dropdown-toggle">Services</span>
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Motherboard Repair</a>
-                            <a href="#" class="dropdown-item">Screen Replacement</a>
-                            <a href="#" class="dropdown-item">OS Installations</a>
-                            <a href="#" class="dropdown-item">Restore and Backup</a>
-                            <a href="#" class="dropdown-item">Software Installations & Upgrades</a>
-                            <a href="#" class="dropdown-item">Hardware Upgrades & Services</a>
+                            <a href="./Services/Motherboard_Service.html" class="dropdown-item">Motherboard Repair</a>
+                            <a href="./Services/Screen_Replacement.html" class="dropdown-item">Screen Replacement</a>
+                            <a href="./Services/Wifi_Service.html" class="dropdown-item">Wifi Driver Updates</a>
+                            <a href="./Services/Restore_Backup_Service.html" class="dropdown-item">Data Recovery</a>
+                            <a href="./Services/Hardware_Upgrades.html" class="dropdown-item">SSD & RAM Upgrades</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -93,7 +94,8 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Started</a>
+                <a href="javascript:void(0)" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0"
+                    onclick="openForm()">Get Started</a>
             </div>
         </nav>
 
@@ -103,8 +105,7 @@
                 <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">About</li>
+                    <li class="breadcrumb-item"><a class="active text-primary" href="#">About Us</a></li>
                 </ol>
             </div>
         </div>
@@ -112,15 +113,31 @@
     </div>
     <!-- Navbar & Hero End -->
 
+    <!-- Popup form Start -->
+    <div class="overlay" id="popupForm">
+        <div class="popup">
+            <button class="close-btn" onclick="closeForm()">&times;</button>
+            <h2>Contact Us</h2>
+            <form onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Popup form End -->
+
     <!-- About Start -->
     <div class="container-fluid about py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
                     <div>
-                        <h4 class="text-primary">About Us</h4>
-                        <h1 class="display-5 mb-4"></h1>
-                        <p class="mb-4">At ProPremium Laptops (PPL), we provide new and refurbished laptops backed by
+                        <h4 class="text-primary mb-2">About Us</h4>
+                        <p class="mb-4 text-center">At ProPremium Laptops (PPL), we provide new and refurbished laptops
+                            backed by
                             warranty, delivering performance, quality, and value. Our certified refurbished options save
                             costs without compromise, while our expert laptop services ensure reliable repairs,
                             upgrades, and maintenance for lasting performance. </p>
@@ -128,9 +145,10 @@
                             <div class="col-md-6 col-lg-6 col-xl-6">
                                 <div class="d-flex">
                                     <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div>
-                                    <div class="ms-4">
-                                        <h4>Business Consuluting</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                    <div class="ms-3">
+                                        <h4>Laptops Consulting</h4>
+                                        <p>Meet our Experts to give you the best advice on laptop selection and
+                                            maintenance.</p>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +162,9 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <a href="#" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Discover
+                                <a href="javascript:void(0)"
+                                    class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0"
+                                    onclick="openForm()">Discover
                                     Now</a>
                             </div>
                             <div class="col-sm-6">
@@ -152,10 +172,26 @@
                                     <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
                                     <div>
                                         <h4>Call Us</h4>
-                                        <p class="mb-0 fs-5" style="letter-spacing: 1px;">+01234567890</p>
+                                        <p class="mb-0 fs-5" style="letter-spacing: 1px;">+91 8056179393</p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Popup  -->
+                            <div class="overlay" id="popupForm">
+                                <div class="popup">
+                                    <button class="close-btn" onclick="closeForm()">&times;</button>
+                                    <h2>Contact Us</h2>
+                                    <form onsubmit="submitForm(event)">
+                                        <input type="text" id="name" placeholder="Your Name" required>
+                                        <input type="email" id="email" placeholder="Your Email" required>
+                                        <input type="tel" id="phone" placeholder="Your Phone" required>
+                                        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                                        <button type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -177,6 +213,7 @@
     <!-- Features Start -->
     <div class="container-fluid feature pb-5">
         <div class="container pb-5">
+
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">Our Features</h4>
                 <h1 class="display-5 mb-4">Delivering Reliable Laptop Solutions with Care and Expertise</h1>
@@ -185,6 +222,7 @@
                     and expert guidance to help you get the best performance and durability from your laptop.
                 </p>
             </div>
+
             <div class="row g-4">
 
                 <!-- Feature 1 -->
@@ -196,7 +234,7 @@
                         <h4>Expert Repairs</h4>
                         <p class="mb-4">From motherboard fixes to screen replacements, our skilled technicians handle
                             all laptop repairs quickly and effectively.</p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
 
@@ -209,7 +247,7 @@
                         <h4>Software Solutions</h4>
                         <p class="mb-4">We provide OS installations, virus removal, backups, and software upgrades to
                             keep your laptop running smoothly.</p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
 
@@ -222,7 +260,7 @@
                         <h4>Upgrades & Performance</h4>
                         <p class="mb-4">Boost performance with RAM, SSD, and hardware upgrades tailored to your needs
                             and budget.</p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
 
@@ -235,14 +273,61 @@
                         <h4>Refurbished Laptops</h4>
                         <p class="mb-4">Get affordable, certified refurbished laptops with warranty, combining
                             performance, savings, and eco-friendliness.</p>
-                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                        <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a> -->
                     </div>
                 </div>
 
             </div>
+
         </div>
     </div>
     <!-- Features End -->
+
+    <!-- Mission & Vision Start -->
+    <div class="container-fluid feature pb-2">
+        <div class="container pb-3">
+
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Our Goal & Our Dream</h4>
+                <h1 class="display-5 mb-4">Mission and Vision</h1>
+
+                <!-- <h4 class="mb-1 text-primary">Mission</h4> -->
+                <p class="mb-4">
+                    <strong>Our Mission</strong> is to deliver reliable, affordable, and innovative laptop solutions
+                    with
+                    exceptional customer service. We aim to extend the life of devices through expert repair, timely
+                    upgrades, and trustworthy support, ensuring technology is accessible for everyone.
+                </p>
+
+                <!-- <h4 class="mb-1 text-primary">Vision</h4> -->
+                <p class="mb-1">
+                    <strong>Our Vision</strong> is to become the most trusted and customer-centric laptop service and
+                    sales provider,
+                    empowering individuals and businesses with sustainable, future-ready technology that drives growth,
+                    efficiency, and digital transformation
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Mission & Vision End -->
+
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid feature pb-2">
+        <div class="container pb-5">
+
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h4 class="text-primary">Why Choose Us</h4>
+                <h1 class="display-5 mb-4">Get The Best Laptop and It's Solutions</h1>
+                <p class="mb-4">We are committed to providing our customers with the best possible laptop solutions,
+                    backed by exceptional service and support.</p>
+                <p class="mb-4">Integrity, quality, and customer satisfaction are at the core of everything we do.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us End -->
+
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -261,10 +346,12 @@
                 <div class="col-md-6 col-lg-6 col-xl-2">
                     <div class="footer-item">
                         <h4 class="text-white mb-4">Quick Links</h4>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                        <a href="sales.html"><i class="fas fa-angle-right me-2"></i>Sales</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i>Services</a>
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="feature.html"><i class="fas fa-angle-right me-2"></i> Feature</a>
+                        <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact us</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-2">
@@ -273,7 +360,7 @@
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+                        <a href="FAQ.html"><i class="fas fa-angle-right me-2"></i> FAQ</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -281,7 +368,7 @@
                         <h4 class="text-white mb-4">Contact Info</h4>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">Chennai</p>
+                            <p class="text-white mb-0">No 4, 4th floor, karthik complex, near Irani tea shop, Chintadripet, Chennai - 600002</p>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-envelope text-primary me-3"></i>
@@ -289,7 +376,7 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">(+012) 3456 7890</p>
+                            <p class="text-white mb-0">+91 8056179393</p>
                         </div>
                         <div class="d-flex align-items-center mb-4">
                             <i class="fab fa-firefox-browser text-primary me-3"></i>

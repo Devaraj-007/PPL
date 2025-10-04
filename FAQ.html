@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Stocker - Stock Market Website Template</title>
+    <title>Pro Premium Laptops - Sales & Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -45,11 +45,13 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <img src="img/PPL_Laptops_logo.png" alt="Logo">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+            <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="img/PPL_Laptops_logo.png" alt="Logo" class="ms-4">
+                <strong class="text-dark ms-4 fs-4">Pro Premium Laptop</strong>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -67,16 +69,15 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                        <a href="service.html" class="nav-link" data-bs-toggle="dropdown">
                             <span class="dropdown-toggle">Services</span>
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Motherboard Repair</a>
-                            <a href="#" class="dropdown-item">Screen Replacement</a>
-                            <a href="#" class="dropdown-item">OS Installations</a>
-                            <a href="#" class="dropdown-item">Restore and Backup</a>
-                            <a href="#" class="dropdown-item">Software Installations & Upgrades</a>
-                            <a href="#" class="dropdown-item">Hardware Upgrades & Services</a>
+                            <a href="./Services/Motherboard_Service.html" class="dropdown-item">Motherboard Repair</a>
+                            <a href="./Services/Screen_Replacement.html" class="dropdown-item">Screen Replacement</a>
+                            <a href="./Services/Wifi_Service.html" class="dropdown-item">Wifi Driver Updates</a>
+                            <a href="./Services/Restore_Backup_Service.html" class="dropdown-item">Data Recovery</a>
+                            <a href="./Services/Hardware_Upgrades.html" class="dropdown-item">SSD & RAM Upgrades</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -84,14 +85,15 @@
                             <span class="dropdown-toggle">Explore</span>
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Our Features</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
                             <a href="blog.html" class="dropdown-item">Blog</a>
                             <a href="FAQ.html" class="dropdown-item">FAQs</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Started</a>
+                <a href="javascript:void(0)" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0"
+                    onclick="openForm()">Get Started</a>
             </div>
         </nav>
 
@@ -101,8 +103,7 @@
                 <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">FAQs</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">FAQ</li>
+                    <li class="breadcrumb-item"><a class="active text-primary" href="#">FAQs</a></li>
                 </ol>
             </div>
         </div>
@@ -110,9 +111,24 @@
     </div>
     <!-- Navbar & Hero End -->
 
+    <!-- Popup form Start -->
+    <div class="overlay" id="popupForm">
+        <div class="popup">
+            <button class="close-btn" onclick="closeForm()">&times;</button>
+            <h2>Contact Us</h2>
+            <form onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Popup form End -->
 
     <!-- FAQs Start -->
-    <div class="container-fluid faq-section pb-5">
+    <div class="container-fluid faq-section pb-5 mt-5">
         <div class="container pb-5 overflow-hidden">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">FAQs</h4>
@@ -127,20 +143,22 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
                     <div class="accordion accordion-flush bg-light rounded p-5" id="accordionFlushSection">
+                        
                         <div class="accordion-item rounded-top">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed rounded-top" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
                                     aria-controls="flush-collapseOne">
-                                    Do new laptops come with a warranty?
+                                    Do you provide warranty on refurbished laptops?
                                 </button>
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSection">
-                                <div class="accordion-body">Yes, all new laptops include the manufacturer’s standard
-                                    warranty along with our after-sales support.</div>
+                                <div class="accordion-body">Yes, all our refurbished laptops come with a standard
+                                    6-month warranty, which can be extended up to 1 year.</div>
                             </div>
                         </div>
+                        
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -156,6 +174,7 @@
                                     certified for sale.</div>
                             </div>
                         </div>
+                        
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -170,6 +189,7 @@
                                     for all major brands.</div>
                             </div>
                         </div>
+                        
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -184,6 +204,36 @@
                                     (RAM, SSD, OS) to suit your specific requirements</div>
                             </div>
                         </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    Are the refurbished laptops tested before sale?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">Every refurbished laptop undergoes a 25+ point quality check
+                                    to ensure top performance and reliability.</div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                    aria-controls="flush-collapseSix">
+                                    Do you provide data backup and recovery services?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushSection">
+                                <div class="accordion-body">Yes, we specialize in secure data backup and recovery solutions to protect your important files and documents.</div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
@@ -213,10 +263,12 @@
                 <div class="col-md-6 col-lg-6 col-xl-2">
                     <div class="footer-item">
                         <h4 class="text-white mb-4">Quick Links</h4>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                        <a href="sales.html"><i class="fas fa-angle-right me-2"></i>Sales</a>
+                        <a href="service.html"><i class="fas fa-angle-right me-2"></i>Services</a>
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="feature.html"><i class="fas fa-angle-right me-2"></i> Feature</a>
+                        <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact us</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-2">
@@ -225,7 +277,7 @@
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
                         <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
-                        <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+                        <a href="FAQ.html"><i class="fas fa-angle-right me-2"></i> FAQ</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
@@ -233,7 +285,8 @@
                         <h4 class="text-white mb-4">Contact Info</h4>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">Chennai</p>
+                            <p class="text-white mb-0">No 4, 4th floor, karthik complex, near Irani tea shop,
+                                Chintadripet, Chennai - 600002</p>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-envelope text-primary me-3"></i>
@@ -241,7 +294,7 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">(+012) 3456 7890</p>
+                            <p class="text-white mb-0">+91 8056179393</p>
                         </div>
                         <div class="d-flex align-items-center mb-4">
                             <i class="fab fa-firefox-browser text-primary me-3"></i>
@@ -263,6 +316,7 @@
         </div>
     </div>
     <!-- Footer End -->
+
 
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">

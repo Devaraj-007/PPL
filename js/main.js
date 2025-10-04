@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner(0);
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -35,8 +35,8 @@
         smartSpeed: 500,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
@@ -51,27 +51,27 @@
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="fa fa-angle-right"></i>',
             '<i class="fa fa-angle-left"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:3
+            1200: {
+                items: 3
             }
         }
     });
@@ -85,27 +85,27 @@
         dots: true,
         loop: true,
         margin: 25,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="fa fa-angle-right"></i>',
             '<i class="fa fa-angle-left"></i>'
         ],
         responsiveClass: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             },
-            1200:{
-                items:3
+            1200: {
+                items: 3
             }
         }
     });
@@ -118,19 +118,56 @@
     });
 
 
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
 
 })(jQuery);
 
+
+// Popup Form
+function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
+
+function submitForm(event) {
+    event.preventDefault();
+    alert("Form submitted!\nName: " + document.getElementById("name").value);
+    closeForm();
+}
+
+// Close if clicked outside
+window.onclick = function (e) {
+    const popup = document.getElementById("popupForm");
+    if (e.target === popup) {
+        closeForm();
+    }
+}
+
+
+// Sales js
+
+
+
+//WOW
+new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animate__animated', // required for Animate.css v4
+    offset: 0,
+    mobile: true,
+    live: true
+}).init();
