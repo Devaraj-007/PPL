@@ -1,332 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Stocker - Stock Market Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>ProLaptop Care - Premium Laptop Service & New Arrivals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="new laptops, laptop repair, laptop service, premium laptop, gaming laptops, business laptops">
+    <meta name="description" content="Professional laptop service center with latest laptop arrivals. Expert technicians, quick turnaround, and warranty-backed services.">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .new-arrival-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .laptop-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        
+        .laptop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .discount-price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #7f8c8d;
+            margin-left: 10px;
+        }
+        
+        .specs-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .specs-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .specs-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 30px;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+        }
+    </style>
+</head>
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<body>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
-            <div class="row gx-0 align-items-center">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-flex flex-wrap">
-                        <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                        <a href="tel:+01234567890" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                        <a href="mailto:example@gmail.com" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
-                    </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find Our Service Centers</a>
+                    <a href="tel:+01234567890" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                    <a href="mailto:service@prolaptopcare.com" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>service@prolaptopcare.com</a>
                 </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> My Dashboard</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                            </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Register</small></a>
+                    <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> My Dashboard</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Service Requests</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+    </div>
+    <!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary"><i class="fas fa-search-dollar me-3"></i>Stocker</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="blog.html" class="nav-item nav-link">Blogs</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link active" data-bs-toggle="dropdown">
-                                <span class="dropdown-toggle">Pages</span>
-                            </a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Our Features</a>
-                                <a href="team.html" class="dropdown-item">Our team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="offer.html" class="dropdown-item active">Our offer</a>
-                                <a href="FAQ.html" class="dropdown-item">FAQs</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
+    <!-- Header Section -->
+    <header class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="text-primary"><i class="fas fa-laptop me-3"></i>ProLaptop Care</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="Sales/newly_arrived_laptops.html" class="nav-item nav-link">Newly Arrivals</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="blog.html" class="nav-item nav-link">Blogs</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link active" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Pages</span>
+                        </a>
+                        <div class="dropdown-menu m-0">
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="offer.html" class="dropdown-item active">New Arrivals</a>
+                            <a href="FAQ.html" class="dropdown-item">FAQs</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
-                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Started</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-            </nav>
-
-            <!-- Header Start -->
-            <div class="container-fluid bg-breadcrumb">
-                <div class="container text-center py-5" style="max-width: 900px;">
-                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Offer</h4>
-                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active text-primary">Our offer</li>
-                    </ol>    
-                </div>
+                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Book Service</a>
             </div>
-            <!-- Header End -->
-        </div>
-        <!-- Navbar & Hero End -->
+        </nav>
 
+        <!-- Hero Section -->
+        <section class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h1 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Latest Laptop Arrivals</h1>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">New Arrivals</li>
+                </ol>    
+            </div>
+        </section>
+        <!-- Hero End -->
+    </header>
+    <!-- Header End -->
 
-        <!-- Offer Start -->
-        <div class="container-fluid offer-section py-5">
+    <!-- Main Content -->
+    <main>
+        <!-- New Arrivals Section -->
+        <section class="container-fluid py-5">
             <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Offer</h4>
-                    <h1 class="display-5 mb-4">Benefits We offer</h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                    </p>
-                </div>
-                <div class="row g-5 align-items-center">
-                    <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="nav nav-pills bg-light rounded p-5">
-                            <a class="accordion-link p-4 active mb-4" data-bs-toggle="pill" href="#collapseOne">
-                                <h5 class="mb-0">Lending money for investment of your new projects</h5>
-                            </a>
-                            <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseTwo">
-                                <h5 class="mb-0">Lending money for investment of your new projects</h5>
-                            </a>
-                            <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseThree">
-                                <h5 class="mb-0">Mobile payment is more flexible and easy for all investors</h5>
-                            </a>
-                            <a class="accordion-link p-4 mb-0" data-bs-toggle="pill" href="#collapseFour">
-                                <h5 class="mb-0">all transaction is kept free for the member of pro traders</h5>
-                            </a>
+                <header class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Just Arrived</h4>
+                    <h2 class="display-5 mb-4 section-title">Latest Premium Laptops</h2>
+                    <p class="mb-0">Discover our newest collection of high-performance laptops for gaming, business, and creative work. All models come with our premium service warranty.</p>
+                </header>
+                
+                <div class="row g-4">
+                    <!-- Laptop 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card laptop-card h-100 shadow-sm">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <img src="https://placehold.co/600x400/3498db/ffffff?text=Gaming+Laptop" class="card-img-top" alt="Acer Predator Helios 300 Gaming Laptop">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Acer Predator Helios 300</h5>
+                                <p class="card-text text-muted">High-performance gaming laptop with RTX 4070</p>
+                                
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i7-13700HX Processor</li>
+                                    <li>NVIDIA GeForce RTX 4070 8GB</li>
+                                    <li>16GB DDR5 RAM, 1TB NVMe SSD</li>
+                                    <li>15.6" QHD 165Hz IPS Display</li>
+                                    <li>RGB Backlit Keyboard</li>
+                                </ul>
+                                
+                                <div class="mt-auto">
+                                    <div class="price-tag">
+                                        <span class="discount-price">$1,599</span>
+                                        <span class="original-price">$1,799</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="#" class="btn btn-outline-primary">View Details</a>
+                                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.4s">
-                        <div class="tab-content">
-                            <div id="collapseOne" class="tab-pane fade show p-0 active">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-1.jpg" class="img-fluid w-100 rounded" alt="">
+                    
+                    <!-- Laptop 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card laptop-card h-100 shadow-sm">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Business+Laptop" class="card-img-top" alt="Dell XPS 13 Plus Business Laptop">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dell XPS 13 Plus</h5>
+                                <p class="card-text text-muted">Ultra-slim business laptop with innovative design</p>
+                                
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i7-1360P Processor</li>
+                                    <li>Intel Iris Xe Graphics</li>
+                                    <li>16GB LPDDR5 RAM, 512GB SSD</li>
+                                    <li>13.4" 4K UHD+ Touch Display</li>
+                                    <li>Windows 11 Pro</li>
+                                </ul>
+                                
+                                <div class="mt-auto">
+                                    <div class="price-tag">
+                                        <span class="discount-price">$1,399</span>
+                                        <span class="original-price">$1,549</span>
                                     </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">The stock market provides a venue...</h1>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet sequi molestiae tenetur eum mollitia, blanditiis, magnam illo magni error dolore unde perspiciatis tempore et totam corrupti dignissimos aut praesentium?
-                                        </p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="#" class="btn btn-outline-primary">View Details</a>
+                                        <a href="#" class="btn btn-primary">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
-                            <div id="collapseTwo" class="tab-pane fade show p-0">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-2.jpg" class="img-fluid w-100 rounded" alt="">
+                        </div>
+                    </div>
+                    
+                    <!-- Laptop 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card laptop-card h-100 shadow-sm">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Creator+Laptop" class="card-img-top" alt="ASUS ZenBook Pro 16X OLED">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">ASUS ZenBook Pro 16X OLED</h5>
+                                <p class="card-text text-muted">Powerful creator laptop with stunning display</p>
+                                
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i9-13900H Processor</li>
+                                    <li>NVIDIA GeForce RTX 4060 8GB</li>
+                                    <li>32GB DDR5 RAM, 2TB NVMe SSD</li>
+                                    <li>16" 4K OLED Touch Display</li>
+                                    <li>ASUS DialPad Virtual Knob</li>
+                                </ul>
+                                
+                                <div class="mt-auto">
+                                    <div class="price-tag">
+                                        <span class="discount-price">$2,299</span>
+                                        <span class="original-price">$2,599</span>
                                     </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">The stock market provides a venue...</h1>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet sequi molestiae tenetur eum mollitia, blanditiis, magnam illo magni error dolore unde perspiciatis tempore et totam corrupti dignissimos aut praesentium?
-                                        </p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="#" class="btn btn-outline-primary">View Details</a>
+                                        <a href="#" class="btn btn-primary">Add to Cart</a>
                                     </div>
                                 </div>
                             </div>
-                            <div id="collapseThree" class="tab-pane fade show p-0">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-3.jpg" class="img-fluid w-100 rounded" alt="">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">The stock market provides a venue...</h1>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet sequi molestiae tenetur eum mollitia, blanditiis, magnam illo magni error dolore unde perspiciatis tempore et totam corrupti dignissimos aut praesentium?
-                                        </p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-5">View All Laptops</a>
+                </div>
+            </div>
+        </section>
+        <!-- New Arrivals End -->
+
+        <!-- Features Section -->
+        <section class="container-fluid bg-light py-5">
+            <div class="container py-5">
+                <header class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Why Choose Us</h4>
+                    <h2 class="display-5 mb-4 section-title">Premium Features & Services</h2>
+                    <p class="mb-0">We provide comprehensive laptop solutions with exceptional customer service and technical expertise.</p>
+                </header>
+                
+                <div class="row g-4">
+                    <!-- Feature 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item text-center p-4 bg-white rounded shadow-sm">
+                            <div class="feature-icon">
+                                <i class="fas fa-tools"></i>
                             </div>
-                            <div id="collapseFour" class="tab-pane fade show p-0">
-                                <div class="row g-4">
-                                    <div class="col-md-7">
-                                        <img src="img/offer-4.jpg" class="img-fluid w-100 rounded" alt="">
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="display-5 mb-4">The stock market provides a venue...</h1>
-                                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet sequi molestiae tenetur eum mollitia, blanditiis, magnam illo magni error dolore unde perspiciatis tempore et totam corrupti dignissimos aut praesentium?
-                                        </p>
-                                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
-                                    </div>
-                                </div>
+                            <h4 class="mb-3">Expert Repair Services</h4>
+                            <p class="mb-0">Our certified technicians provide professional laptop repair services using genuine parts and advanced diagnostic tools.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item text-center p-4 bg-white rounded shadow-sm">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="mb-3">Warranty Protection</h4>
+                            <p class="mb-0">All our services and new laptops come with comprehensive warranty coverage for your peace of mind.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item text-center p-4 bg-white rounded shadow-sm">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h4 class="mb-3">Quick Turnaround</h4>
+                            <p class="mb-0">We understand the importance of your device. Most repairs are completed within 24-48 hours.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item text-center p-4 bg-white rounded shadow-sm">
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <h4 class="mb-3">Free Diagnostics</h4>
+                            <p class="mb-0">Get a comprehensive diagnostic of your laptop's health absolutely free before any repair work.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 5 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item text-center p-4 bg-white rounded shadow-sm">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4 class="mb-3">24/7 Support</h4>
+                            <p class="mb-0">Our customer support team is available round the clock to assist you with any laptop-related issues.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 6 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item text-center p-4 bg-white rounded shadow-sm">
+                            <div class="feature-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h4 class="mb-3">Price Match Guarantee</h4>
+                            <p class="mb-0">We offer competitive pricing with a price match guarantee on all our new laptop models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features End -->
+
+        <!-- Service Comparison Section -->
+        <section class="container-fluid py-5">
+            <div class="container py-5">
+                <header class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Service Plans</h4>
+                    <h2 class="display-5 mb-4 section-title">Choose Your Service Package</h2>
+                    <p class="mb-0">Select the service plan that best fits your needs and budget.</p>
+                </header>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-header bg-primary text-white py-4">
+                                <h4 class="my-0">Basic Care</h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <h2 class="price-tag my-3">$49<span class="fs-6">/year</span></h2>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">Free Diagnostic</li>
+                                    <li class="mb-2">Basic Cleaning Service</li>
+                                    <li class="mb-2">Software Optimization</li>
+                                    <li class="mb-2">Virus Removal</li>
+                                    <li class="mb-2 text-muted">Hardware Repair (Extra)</li>
+                                    <li class="mb-2 text-muted">Data Recovery (Extra)</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline-primary w-100">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card text-center h-100 shadow-sm border-0 position-relative">
+                            <div class="position-absolute top-0 start-50 translate-middle">
+                                <span class="badge bg-danger rounded-pill px-3 py-2">Most Popular</span>
+                            </div>
+                            <div class="card-header bg-dark text-white py-4">
+                                <h4 class="my-0">Premium Care</h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <h2 class="price-tag my-3">$99<span class="fs-6">/year</span></h2>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">All Basic Care Features</li>
+                                    <li class="mb-2">Hardware Repair (20% Off)</li>
+                                    <li class="mb-2">Priority Service</li>
+                                    <li class="mb-2">Data Backup Service</li>
+                                    <li class="mb-2">Annual Deep Cleaning</li>
+                                    <li class="mb-2">Loaner Laptop Available</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary w-100">Select Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card text-center h-100 shadow-sm border-0">
+                            <div class="card-header bg-primary text-white py-4">
+                                <h4 class="my-0">Elite Care</h4>
+                            </div>
+                            <div class="card-body p-4">
+                                <h2 class="price-tag my-3">$199<span class="fs-6">/year</span></h2>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">All Premium Care Features</li>
+                                    <li class="mb-2">Unlimited Hardware Repairs</li>
+                                    <li class="mb-2">24/7 Priority Support</li>
+                                    <li class="mb-2">Onsite Service Available</li>
+                                    <li class="mb-2">Data Recovery Included</li>
+                                    <li class="mb-2">Accidental Damage Coverage</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline-primary w-100">Select Plan</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Offer End -->
+        </section>
+        <!-- Service Comparison End -->
+    </main>
+    <!-- Main Content End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class="footer-item">
-                            <a href="index.html" class="p-0">
-                                <h4 class="text-white"><i class="fas fa-search-dollar me-3"></i>Stocker</h4>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
+    <!-- Footer Start -->
+    <footer class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <a href="index.html" class="p-0">
+                            <h4 class="text-white"><i class="fas fa-laptop me-3"></i>ProLaptop Care</h4>
+                        </a>
+                        <p class="mb-4">Your trusted partner for premium laptop sales, repair and maintenance services. We specialize in high-end laptops with certified technicians and genuine parts.</p>
+                        <div class="d-flex">
+                            <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
+                                <i class="fas fa-star text-white"></i>
+                                <div class="ms-3">
+                                    <small class="text-white">Rated 4.9/5</small>
+                                    <h6 class="text-white">Customer Reviews</h6>
+                                </div>
                             </a>
-                            <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
-                            <div class="d-flex">
-                                <a href="#" class="bg-primary d-flex rounded align-items-center py-2 px-3 me-2">
-                                    <i class="fas fa-apple-alt text-white"></i>
-                                    <div class="ms-3">
-                                        <small class="text-white">Download on the</small>
-                                        <h6 class="text-white">App Store</h6>
-                                    </div>
-                                </a>
-                                <a href="#" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
-                                    <i class="fas fa-play text-primary"></i>
-                                    <div class="ms-3">
-                                        <small class="text-white">Get it on</small>
-                                        <h6 class="text-white">Google Play</h6>
-                                    </div>
-                                </a>
-                            </div>
+                            <a href="#" class="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2">
+                                <i class="fas fa-award text-primary"></i>
+                                <div class="ms-3">
+                                    <small class="text-white">Certified</small>
+                                    <h6 class="text-white">Technicians</h6>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-2">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Attractions</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Tickets</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-2">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> New Arrivals</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Book Repair</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Support</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Disclaimer</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Help</a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Support</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Warranty Info</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Service Status</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Help Center</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Contact Info</h4>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">123 Street New York.USA</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-envelope text-primary me-3"></i>
-                                <p class="text-white mb-0">info@example.com</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fa fa-phone-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">(+012) 3456 7890</p>
-                            </div>
-                            <div class="d-flex align-items-center mb-4">
-                                <i class="fab fa-firefox-browser text-primary me-3"></i>
-                                <p class="text-white mb-0">Yoursite@ex.com</p>
-                            </div>
-                            <div class="d-flex">
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
-                            </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">123 Tech Street, New York, USA</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <p class="text-white mb-0">service@prolaptopcare.com</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">(+012) 3456 7890</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-clock text-primary me-3"></i>
+                            <p class="text-white mb-0">Mon-Sat: 9AM - 7PM</p>
+                        </div>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
+    </footer>
+    <!-- Footer End -->
+    
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>ProLaptop Care</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
+ <a href="https://wa.me/918122038045?text=Hello%20Pro%20Premium%20Laptop%20Team!%20I'm%20interested%20in%20your%20laptop%20service%20and%20repair%20solutions.%20Could%20you%20please%20share%20the%20available%20service%20options,%20pricing,%20and%20estimated%20repair%20time%3F%20Thank%20you!" 
+   class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp" rel="noopener">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 
 </html>

@@ -46,10 +46,16 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
-            <a href="#" class="navbar-brand p-0 d-flex align-items-center">
-                <img src="img/PPL_Laptops_logo.png" alt="Logo" class="ms-4">
-                <strong class="text-dark ms-4 fs-4">Pro Premium Laptop</strong>
+            <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="img/PPL_Laptops_logo_2.png" alt="Logo" class="ms-4">
+
+                <!-- Desktop View -->
+                <h1 class="text-dark ms-4 fs-4 d-none d-lg-block">Pro Premium Laptops</h1>
+
+                <!-- Mobile View -->
+                <h1 class="text-dark d-block d-lg-none">PPL</h1>
             </a>
+
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -58,6 +64,7 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="Sales/newly_arrived_laptops.html" class="nav-item nav-link">Newly Arrivals</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
                             <span class="dropdown-toggle">Sales</span>
@@ -111,18 +118,25 @@
     </div>
     <!-- Navbar & Hero End -->
 
-    <!-- Popup form Start -->
     <div class="overlay" id="popupForm">
         <div class="popup">
             <button class="close-btn" onclick="closeForm()">&times;</button>
             <h2>Contact Us</h2>
-            <form onsubmit="submitForm(event)">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <input type="tel" id="phone" placeholder="Your Phone" required>
-                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <form id="popupContactForm" onsubmit="submitPopupForm(event)">
+                <input type="text" id="popupName" placeholder="Your Name" required>
+                <input type="email" id="popupEmail" placeholder="Your Email" required>
+                <input type="tel" id="popupPhone" placeholder="Your Phone" required>
+                <textarea id="popupMessage" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
+            <div id="successMessage" class="alert alert-success alert-dismissible fade show" style="display: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+
+            <div id="errorMessage" class="alert alert-danger alert-dismissible fade show" style="display: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <span id="errorText"></span>
+            </div>
         </div>
     </div>
     <!-- Popup form End -->
@@ -144,7 +158,7 @@
                                         <div>
                                             <h4>Address</h4>
                                             <p class="mb-0">No 4, 4th floor, karthik complex, near Irani tea shop,
-                                                Chintadripet, Chennai - 600002</p>
+                                                Chintadripet, Chennai 600002</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,7 +169,7 @@
                                         </div>
                                         <div>
                                             <h4>Mail Us</h4>
-                                            <p class="mb-0">ppl@example.com</p>
+                                            <a href="mailto:propremiumlaptop@gmail.com" class="mb-0">propremiumlaptop@gmail.com</a>
                                         </div>
                                     </div>
                                 </div>
@@ -166,7 +180,7 @@
                                         </div>
                                         <div>
                                             <h4>Telephone</h4>
-                                            <p class="mb-0">+91 8056179393</p>
+                                            <a href="tel:+91 8122038045" class="mb-0">+91 8122038045</a>
                                         </div>
                                     </div>
                                 </div>
@@ -177,36 +191,47 @@
                                         </div>
                                         <div>
                                             <h4>propremiumlaptop.com</h4>
-                                            <p class="mb-0">+91 8056179393</p>
+                                            <a href="tel:+91 8122038045" class="mb-0">+91 8122038045</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="bg-light p-5 rounded h-100 wow fadeInUp" data-wow-delay="0.2s">
-
                             <h4 class="text-primary">Send Your Message</h4>
 
-                            <form>
+                            <!-- Success and Error Messages -->
+                            <div id="successMessage" class="alert alert-success alert-dismissible fade show"
+                                style="display: none;">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+
+                            <div id="errorMessage" class="alert alert-danger alert-dismissible fade show"
+                                style="display: none;">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                <span id="errorText"></span>
+                            </div>
+
+                            <form id="mainContactForm">
                                 <div class="row g-4">
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating">
                                             <input type="text" class="form-control border-0" id="name"
-                                                placeholder="Your Name">
+                                                placeholder="Your Name" required>
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating">
                                             <input type="email" class="form-control border-0" id="email"
-                                                placeholder="Your Email">
+                                                placeholder="Your Email" required>
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-12">
                                         <div class="form-floating">
-                                            <input type="phone" class="form-control border-0" id="phone"
-                                                placeholder="Phone">
+                                            <input type="tel" class="form-control border-0" id="phone"
+                                                placeholder="Phone" required>
                                             <label for="phone">Mobile Number</label>
                                         </div>
                                     </div>
@@ -214,36 +239,36 @@
                                         <div class="form-floating">
                                             <select class="form-select" id="service" required>
                                                 <option value="" disabled selected>Select a service</option>
-                                                <option value="Enquiry">Laptop Enquiry</option>
-                                                <option value="Service">Service Enquiry</option>
-                                                <option value="others">Others</option>
+                                                <option value="Laptop Enquiry">Laptop Enquiry</option>
+                                                <option value="Service Enquiry">Service Enquiry</option>
+                                                <option value="Others">Others</option>
                                             </select>
+                                            <label for="service">Service Type</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <textarea class="form-control border-0" placeholder="Leave a message here"
-                                                id="message" style="height: 140px"></textarea>
+                                                id="message" style="height: 140px" required></textarea>
                                             <label for="message">Message</label>
                                         </div>
-
                                     </div>
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary w-100 py-3">Submit</button>
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="rounded h-100">
                         <iframe class="rounded h-100 w-100" style="height: 400px;"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239039.09493277228!2d80.043859901889!3d13.047473316368206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1758697765318!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3734.642413722851!2d80.2689552750782!3d13.070188487254278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA0JzEyLjciTiA4MMKwMTYnMTcuNSJF!5e1!3m2!1sen!2sin!4v1759741511419!5m2!1sen!2sin"
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -265,7 +290,7 @@
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-2">
                     <div class="footer-item">
-                        <h4 class="text-white mb-4">Quick Links</h4>                        
+                        <h4 class="text-white mb-4">Quick Links</h4>
                         <a href="sales.html"><i class="fas fa-angle-right me-2"></i>Sales</a>
                         <a href="service.html"><i class="fas fa-angle-right me-2"></i>Services</a>
                         <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
@@ -293,11 +318,11 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-envelope text-primary me-3"></i>
-                            <p class="text-white mb-0">ppl@example.com</p>
+                            <a href="mailto:propremiumlaptop@gmail.com" class="text-white mb-0">propremiumlaptop@gmail.com</a>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">+91 8056179393</p>
+                            <a href="tel:+91 8122038045" class="text-white mb-0">+91 8122038045</a>
                         </div>
                         <div class="d-flex align-items-center mb-4">
                             <i class="fab fa-firefox-browser text-primary me-3"></i>
@@ -332,7 +357,11 @@
             </div>
         </div>
     </div>
-    <!-- Copyright End -->
+ <a href="https://wa.me/918122038045?text=Hello%20Pro%20Premium%20Laptop%20Team!%20I'm%20interested%20in%20your%20laptop%20service%20and%20repair%20solutions.%20Could%20you%20please%20share%20the%20available%20service%20options,%20pricing,%20and%20estimated%20repair%20time%3F%20Thank%20you!" 
+   class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp" rel="noopener">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
 
 
     <!-- Back to Top -->
@@ -352,6 +381,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/mail.js"></script>
 </body>
 
 </html>

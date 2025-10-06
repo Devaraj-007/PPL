@@ -1,38 +1,33 @@
- 
+=> WEBSITE DEVELOPMENT LICENSE BY 7s IQ Pvt Ltd
 
- => FREE HTML TEMPLATE LICENSE BY HTML Codex
+All templates, designs, and code developed by 7s IQ Pvt Ltd are licensed for business and client use under the 7s IQ Pvt Ltd Web Development License Agreement.  
+By using or deploying this website, you agree to the following terms and conditions.
 
- All free HTML templates by HTML Codex are licensed under a Creative Commons Attribution 4.0 International License which means you are not allowed to remove the author’s credit link/attribution link/backlink.
+=> YOU ARE ALLOWED
 
- When you download or use our free HTML templates, it will attribute the following conditions.
+   1. You are allowed to use this website for both personal and commercial purposes.
+   2. You are allowed to modify, customize, and expand the website according to your business needs.
+   3. You are allowed to integrate the website with CMS, ERP, CRM, or other systems.
+   4. You are allowed to showcase or reference this project in your portfolio, with credit to 7s IQ Pvt Ltd.
+   5. You are allowed to host or deploy the website for your organization or clients.
 
+=> YOU ARE NOT ALLOWED
 
- => YOU ARE ALLOWED
+   1. You are not allowed to remove or alter the developer credit or company attribution link to 7s IQ Pvt Ltd without written permission.
+   2. You are not allowed to sell, resell, rent, lease, license, or redistribute this project under another brand name.
+   3. You are not allowed to upload, share, or list this website template on third-party template marketplaces or collection sites.
 
-      1. You are allowed to use for your personal and commercial purposes.
+=> NOTE
 
-      2. You are allowed to modify/customize however you like.
+   Some demo images or icons used in this website are for preview purposes only.  
+   You are responsible for obtaining proper licenses for any third-party media assets used in your final deployment.
 
-      3. You are allowed to convert/port for use for any CMS.
+=> LICENSE TERMINATION
 
-      4. You are allowed to share/distribute under the HTML Codex brand name.
+   This license will be terminated if you breach any of the above conditions.
 
-      5. You are allowed to put a screenshot or a link on your blog posts or any other websites.
+=> CONTACT & LICENSE INQUIRIES
 
-
- => YOU ARE NOT ALLOWED
-
-      1. You are not allowed to remove the author’s credit link/attribution link/backlink without purchasing Credit Removal License ( https://htmlcodex.com/credit-removal ).
-
-      2. You are not allowed to sell, resale, rent, lease, license, or sub-license.
-
-      3. You are not allowed to upload on your template websites or template collection websites or any other third party websites without our permission.
-
-
- => If the template contains premium stock photos which are only for demo purposes and not distributed with the template. You need to purchase them separately from the corresponding stock photo website. You are responsible for adhering to the original license of them if necessary.
-
-
- => This license can be terminated if you breach any of these conditions.
-
-
- => PURCHASE CREDIT REMOVAL LICENSE ( https://htmlcodex.com/credit-removal )
+   For customization, credit removal, or enterprise license, please contact:  
+   ğŸ“§ info@7siq.com  
+   ğŸŒ https://7siq.com

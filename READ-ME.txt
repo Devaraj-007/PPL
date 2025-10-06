@@ -1,9 +1,7 @@
-  =>  Template Name    : Stocker - Stock Market Website Template
+=>  Developed By     : 7s IQ Pvt Ltd
 
-  =>  Template Link    : https://htmlcodex.com/stock-market-website-template
+=>  About Company    : 7s IQ Pvt Ltd is a leading technology and digital solutions company specializing in web development, ERP systems, mobile app design, and enterprise software solutions. Our mission is to deliver innovative, scalable, and result-oriented IT services that empower businesses to grow in the digital era.
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+=>  Company Website  : https://7siq.com
 
-  =>  Template Author  : HTML Codex
-
-  =>  Author Website   : https://htmlcodex.com
+=>  Copyright Notice : © 2025 7s IQ Pvt Ltd. All Rights Reserved.

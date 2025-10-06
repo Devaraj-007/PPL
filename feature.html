@@ -46,10 +46,16 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
-            <a href="#" class="navbar-brand p-0 d-flex align-items-center">
-                <img src="img/PPL_Laptops_logo.png" alt="Logo" class="ms-4">
-                <strong class="text-dark ms-4 fs-4">Pro Premium Laptop</strong>
+            <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="img/PPL_Laptops_logo_2.png" alt="Logo" class="ms-4">
+
+                <!-- Desktop View -->
+                <h1 class="text-dark ms-4 fs-4 d-none d-lg-block">Pro Premium Laptops</h1>
+
+                <!-- Mobile View -->
+                <h1 class="text-dark d-block d-lg-none">PPL</h1>
             </a>
+
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -58,6 +64,7 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="Sales/newly_arrived_laptops.html" class="nav-item nav-link">Newly Arrived</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
                             <span class="dropdown-toggle">Sales</span>
@@ -116,13 +123,21 @@
         <div class="popup">
             <button class="close-btn" onclick="closeForm()">&times;</button>
             <h2>Contact Us</h2>
-            <form onsubmit="submitForm(event)">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <input type="tel" id="phone" placeholder="Your Phone" required>
-                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <form id="popupContactForm" onsubmit="submitPopupForm(event)">
+                <input type="text" id="popupName" placeholder="Your Name" required>
+                <input type="email" id="popupEmail" placeholder="Your Email" required>
+                <input type="tel" id="popupPhone" placeholder="Your Phone" required>
+                <textarea id="popupMessage" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
+            <div id="successMessage" class="alert alert-success alert-dismissible fade show" style="display: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+
+            <div id="errorMessage" class="alert alert-danger alert-dismissible fade show" style="display: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <span id="errorText"></span>
+            </div>
         </div>
     </div>
     <!-- Popup form End -->
@@ -190,53 +205,57 @@
 
             </div>
 
-          <div class="row g-4">
+            <div class="row g-4">
 
-    <!-- Feature 5 -->
-    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="feature-item p-4">
-            <div class="feature-icon p-4 mb-4">
-                <i class="fas fa-shield-alt fa-4x text-primary"></i>
+                <!-- Feature 5 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-shield-alt fa-4x text-primary"></i>
+                        </div>
+                        <h4>Reliable Protection</h4>
+                        <p class="mb-4">Keep your laptop safe with expert diagnostics, virus protection, and
+                            long-lasting performance care.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-microchip fa-4x text-primary"></i>
+                        </div>
+                        <h4>Advanced Hardware</h4>
+                        <p class="mb-4">Upgrade with the latest processors, RAM, and SSDs for smooth multitasking and
+                            speed.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-sync-alt fa-4x text-primary"></i>
+                        </div>
+                        <h4>Seamless Upgrades</h4>
+                        <p class="mb-4">From OS updates to software installs, we keep your system modern and
+                            hassle-free.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="feature-item p-4">
+                        <div class="feature-icon p-4 mb-4">
+                            <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
+                        </div>
+                        <h4>Affordable Solutions</h4>
+                        <p class="mb-4">Get premium laptops and services at prices that fit your budget, with full
+                            warranty support.</p>
+                    </div>
+                </div>
+
             </div>
-            <h4>Reliable Protection</h4>
-            <p class="mb-4">Keep your laptop safe with expert diagnostics, virus protection, and long-lasting performance care.</p>
-        </div>
-    </div>
-
-    <!-- Feature 6 -->
-    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-        <div class="feature-item p-4">
-            <div class="feature-icon p-4 mb-4">
-                <i class="fas fa-microchip fa-4x text-primary"></i>
-            </div>
-            <h4>Advanced Hardware</h4>
-            <p class="mb-4">Upgrade with the latest processors, RAM, and SSDs for smooth multitasking and speed.</p>
-        </div>
-    </div>
-
-    <!-- Feature 7 -->
-    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-        <div class="feature-item p-4">
-            <div class="feature-icon p-4 mb-4">
-                <i class="fas fa-sync-alt fa-4x text-primary"></i>
-            </div>
-            <h4>Seamless Upgrades</h4>
-            <p class="mb-4">From OS updates to software installs, we keep your system modern and hassle-free.</p>
-        </div>
-    </div>
-
-    <!-- Feature 8 -->
-    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-        <div class="feature-item p-4">
-            <div class="feature-icon p-4 mb-4">
-                <i class="fas fa-hand-holding-usd fa-4x text-primary"></i>
-            </div>
-            <h4>Affordable Solutions</h4>
-            <p class="mb-4">Get premium laptops and services at prices that fit your budget, with full warranty support.</p>
-        </div>
-    </div>
-
-</div>
 
 
         </div>
@@ -287,11 +306,11 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-envelope text-primary me-3"></i>
-                            <p class="text-white mb-0">ppl@example.com</p>
+                            <a href="mailto:propremiumlaptop@gmail.com"  class="text-white mb-0">propremiumlaptop@gmail.com</a>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">+91 8056179393</p>
+                            <a href="tel:+91 8122038045" class="text-white mb-0">+91 8122038045</a>
                         </div>
                         <div class="d-flex align-items-center mb-4">
                             <i class="fab fa-firefox-browser text-primary me-3"></i>
@@ -328,6 +347,10 @@
         </div>
     </div>
     <!-- Copyright End -->
+    <a href="https://wa.me/918122038045?text=Hello%20Pro%20Premium%20Laptop%20Team!%20I'm%20interested%20in%20your%20laptop%20service%20and%20repair%20solutions.%20Could%20you%20please%20share%20the%20available%20service%20options,%20pricing,%20and%20estimated%20repair%20time%3F%20Thank%20you!"
+        class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 
     <!-- Back to Top -->
@@ -347,6 +370,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/mail.js"></script>
 </body>
 
 </html>

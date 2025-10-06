@@ -147,7 +147,6 @@ function closeForm() {
 function submitForm(event) {
     event.preventDefault();
     alert("Form submitted!\nName: " + document.getElementById("name").value);
-    closeForm();
 }
 
 // Close if clicked outside

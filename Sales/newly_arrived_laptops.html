@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Newly Arrived Laptops - Pro Premium Laptops</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles for newly arrived laptops */
+        .new-arrival-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(45deg, #e74c3c, #ff4757);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .laptop-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .laptop-img-container {
+            height: 220px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .laptop-img {
+            max-height: 180px;
+            transition: transform 0.5s ease;
+        }
+
+        .laptop-card:hover .laptop-img {
+            transform: scale(1.05);
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .inr-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .inr-price::before {
+            content: "₹";
+            font-size: 1.5rem;
+            margin-right: 2px;
+        }
+
+        .discount-price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #7f8c8d;
+            margin-left: 10px;
+            font-size: 1.1rem;
+        }
+
+        .emi-badge {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .specs-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .specs-list li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .specs-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 2px;
+        }
+
+
+        .brand-section {
+            margin-bottom: 50px;
+        }
+
+        .brand-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .brand-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .offer-timer {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+            <a href="../index.html" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="../img/PPL_Laptops_logo_2.png" alt="Logo" class="ms-4">
+
+                <!-- Desktop View -->
+                <h1 class="text-dark ms-4 fs-4 d-none d-lg-block">Pro Premium Laptops</h1>
+
+                <!-- Mobile View -->
+                <h2 class="text-dark d-block d-lg-none">PPL</h2>
+            </a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../index.html" class="nav-item nav-link active">Home</a>
+                    <a href="../about.html" class="nav-item nav-link">About</a>
+                    <a href="../Sales/newly_arrived_laptops.html" class="nav-item nav-link">Newly Arrived</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Sales</span>
+                        </a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../sales.html" class="dropdown-item">Laptops</a>
+                            <a href="../sales.html" class="dropdown-item">Refurbished Laptops</a>
+                            <a href="../sales.html" class="dropdown-item">Tablets</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="../service.html" class="nav-link" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Services</span>
+                        </a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../Services/Motherboard_Service.html" class="dropdown-item">Motherboard Repair</a>
+                            <a href="../Services/Screen_Replacement.html" class="dropdown-item">Screen Replacement</a>
+                            <a href="../Services/Wifi_Service.html" class="dropdown-item">Wifi Driver Updates</a>
+                            <a href="../Services/Restore_Backup_Service.html" class="dropdown-item">Data Recovery</a>
+                            <a href="../Services/Hardware_Upgrades.html" class="dropdown-item">SSD & RAM Upgrades</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <span class="dropdown-toggle">Explore</span>
+                        </a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../feature.html" class="dropdown-item">Our Features</a>
+                            <a href="../blog.html" class="dropdown-item">Blog</a>
+                            <a href="../FAQ.html" class="dropdown-item">FAQs</a>
+                        </div>
+                    </div>
+                    <a href="../contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0"
+                    onclick="openForm()">Get Started</a>
+            </div>
+        </nav>
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Newly Arrived Laptops</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="../sales.html">Sales</a></li>
+                    <li class="breadcrumb-item "><a class="active text-primary" href="#">New Arrivals</a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Popup form Start -->
+    <div class="overlay" id="popupForm">
+        <div class="popup">
+            <button class="close-btn" onclick="closeForm()">&times;</button>
+            <h2>Contact Us</h2>
+            <form id="popupContactForm" onsubmit="submitPopupForm(event)">
+                <input type="text" id="popupName" placeholder="Your Name" required>
+                <input type="email" id="popupEmail" placeholder="Your Email" required>
+                <input type="tel" id="popupPhone" placeholder="Your Phone" required>
+                <textarea id="popupMessage" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="successMessage" class="alert alert-success alert-dismissible fade show" style="display: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+
+            <div id="errorMessage" class="alert alert-danger alert-dismissible fade show" style="display: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <span id="errorText"></span>
+            </div>
+        </div>
+    </div>
+    <!-- Popup form End -->
+
+    <!-- New Laptops Start -->
+    <div class="container-fluid service pb-5 gradient-bg">
+        <div class="container pb-5 mt-5">
+
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h1 class="display-5 mt-3 section-title">Newly Arrived Laptops</h1>
+                <p class="fs-5">Discover our latest collection of premium laptops with cutting-edge technology and
+                    exclusive offers.</p>
+            </div>
+
+            <!-- HP Sections -->
+            <div class="brand-section">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary mt-1 brand-title">HP Laptops</h4>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">12% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-1(HP).webp" class="laptop-img" alt="HP Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">HP 14s</h5>
+                                <p class="card-text text-muted">Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 1235U Processor</li>
+                                    <li>16GB DDR4 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>14" FHD Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">54,999</span>
+                                        <span class="original-price">₹62,499</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹2,749/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">8% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-1(HP).webp" class="laptop-img" alt="HP Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">HP Pavilion 15</h5>
+                                <p class="card-text text-muted">AMD Ryzen 5 5625U, 8GB RAM, 512GB SSD, 15.6" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>AMD Ryzen 5 5625U Processor</li>
+                                    <li>8GB DDR4 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>15.6" FHD Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">49,999</span>
+                                        <span class="original-price">₹54,299</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹2,499/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-1(HP).webp" class="laptop-img" alt="HP Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">HP Victus 16</h5>
+                                <p class="card-text text-muted">Intel Core i5 12500H, RTX 3050, 16GB RAM, 512GB SSD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 12500H Processor</li>
+                                    <li>NVIDIA RTX 3050 4GB GPU</li>
+                                    <li>16GB DDR4 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>16.1" FHD 144Hz Display</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">79,999</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹3,999/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">15% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-1(HP).webp" class="laptop-img" alt="HP Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">HP Spectre x360</h5>
+                                <p class="card-text text-muted">Intel Evo i7, 16GB RAM, 1TB SSD, 13.5" OLED Touch</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i7 1255U Processor</li>
+                                    <li>16GB LPDDR4x RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>13.5" OLED Touch Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">1,24,999</span>
+                                        <span class="original-price">₹1,46,999</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹6,249/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DELL Sections -->
+            <div class="brand-section">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary mt-4 brand-title">DELL Laptops</h4>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">10% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-2(DELL).webp" class="laptop-img" alt="Dell Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dell Inspiron 15</h5>
+                                <p class="card-text text-muted">AMD Ryzen 5 7520U, 8GB RAM, 512GB SSD, 15.6" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>AMD Ryzen 5 7520U Processor</li>
+                                    <li>8GB DDR5 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>15.6" FHD Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">52,999</span>
+                                        <span class="original-price">₹58,799</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹2,649/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-2(DELL).webp" class="laptop-img" alt="Dell Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dell XPS 13 Plus</h5>
+                                <p class="card-text text-muted">Intel Core i7 1360P, 16GB RAM, 1TB SSD, 13.4" UHD+</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i7 1360P Processor</li>
+                                    <li>16GB LPDDR5 RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>13.4" UHD+ Touch Display</li>
+                                    <li>Windows 11 Pro</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">1,49,999</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹7,499/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">12% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-2(DELL).webp" class="laptop-img" alt="Dell Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dell G15 Gaming</h5>
+                                <p class="card-text text-muted">Intel i5 12500H, RTX 3050, 16GB RAM, 512GB SSD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 12500H Processor</li>
+                                    <li>NVIDIA RTX 3050 6GB GPU</li>
+                                    <li>16GB DDR5 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>15.6" FHD 120Hz Display</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">84,999</span>
+                                        <span class="original-price">₹96,499</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹4,249/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">5% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-2(DELL).webp" class="laptop-img" alt="Dell Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dell Latitude 5430</h5>
+                                <p class="card-text text-muted">Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 1235U Processor</li>
+                                    <li>16GB DDR4 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>14" FHD Display</li>
+                                    <li>Windows 11 Pro</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">76,999</span>
+                                        <span class="original-price">₹80,999</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹3,849/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACER Sections -->
+            <div class="brand-section">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary mt-4 brand-title">ACER Laptops</h4>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">18% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-3(ACER).webp" class="laptop-img" alt="Acer Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Acer Swift Go 14</h5>
+                                <p class="card-text text-muted">Intel Core i5 1335U, 16GB RAM, 512GB SSD, OLED 14"</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 1335U Processor</li>
+                                    <li>16GB LPDDR5 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>14" OLED Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">74,999</span>
+                                        <span class="original-price">₹91,299</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹3,749/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-3(ACER).webp" class="laptop-img" alt="Acer Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Acer Aspire 5</h5>
+                                <p class="card-text text-muted">Intel Core i3 1215U, 8GB RAM, 512GB SSD, 15.6" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i3 1215U Processor</li>
+                                    <li>8GB DDR4 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>15.6" FHD Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">39,999</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹1,999/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">22% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-3(ACER).webp" class="laptop-img" alt="Acer Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Acer Predator Helios</h5>
+                                <p class="card-text text-muted">Intel i7 13700HX, RTX 4060, 16GB RAM, 1TB SSD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i7 13700HX Processor</li>
+                                    <li>NVIDIA RTX 4060 8GB GPU</li>
+                                    <li>16GB DDR5 RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>16" QHD 165Hz Display</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">1,39,999</span>
+                                        <span class="original-price">₹1,79,299</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹6,999/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">7% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-3(ACER).webp" class="laptop-img" alt="Acer Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Acer Spin 5</h5>
+                                <p class="card-text text-muted">Intel Core i5 1240P, 16GB RAM, 1TB SSD, 14" 2K Touch</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 1240P Processor</li>
+                                    <li>16GB LPDDR4x RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>14" 2K Touch Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">89,999</span>
+                                        <span class="original-price">₹96,699</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹4,499/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LENOVO Sections -->
+            <div class="brand-section">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary mt-4 brand-title">LENOVO Laptops</h4>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">15% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-4(LENOVO).webp" class="laptop-img" alt="Lenovo Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Lenovo IdeaPad Slim 3</h5>
+                                <p class="card-text text-muted">AMD Ryzen 7 7730U, 16GB RAM, 1TB SSD, 15.6" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>AMD Ryzen 7 7730U Processor</li>
+                                    <li>16GB DDR4 RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>15.6" FHD Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">64,999</span>
+                                        <span class="original-price">₹76,399</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹3,249/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-4(LENOVO).webp" class="laptop-img" alt="Lenovo Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Lenovo ThinkPad E14</h5>
+                                <p class="card-text text-muted">Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i5 1235U Processor</li>
+                                    <li>16GB DDR4 RAM</li>
+                                    <li>512GB NVMe SSD Storage</li>
+                                    <li>14" FHD Display</li>
+                                    <li>Windows 11 Pro</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">71,999</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹3,599/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">20% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-4(LENOVO).webp" class="laptop-img" alt="Lenovo Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Lenovo Legion 5</h5>
+                                <p class="card-text text-muted">AMD Ryzen 7 7745HX, RTX 4060, 16GB RAM, 1TB SSD</p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>AMD Ryzen 7 7745HX Processor</li>
+                                    <li>NVIDIA RTX 4060 8GB GPU</li>
+                                    <li>16GB DDR5 RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>16" WQXGA 165Hz Display</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">1,29,999</span>
+                                        <span class="original-price">₹1,62,299</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹6,499/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card laptop-card h-100">
+                            <div class="position-relative">
+                                <span class="new-arrival-badge">NEW</span>
+                                <span class="discount-badge">10% OFF</span>
+                                <div class="laptop-img-container">
+                                    <img src="../img/product-4(LENOVO).webp" class="laptop-img" alt="Lenovo Laptop">
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Lenovo Yoga 7i</h5>
+                                <p class="card-text text-muted">Intel Core i7 1355U, 16GB RAM, 1TB SSD, 14" 2.8K OLED
+                                </p>
+
+                                <ul class="specs-list mb-3">
+                                    <li>Intel Core i7 1355U Processor</li>
+                                    <li>16GB LPDDR5 RAM</li>
+                                    <li>1TB NVMe SSD Storage</li>
+                                    <li>14" 2.8K OLED Touch Display</li>
+                                    <li>Windows 11 Home</li>
+                                </ul>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="inr-price discount-price">1,19,999</span>
+                                        <span class="original-price">₹1,33,299</span>
+                                    </div>
+                                    <div class="emi-badge">EMI starts at ₹5,999/month</div>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <a href="../contact.html" class="btn btn-outline-primary">Enquire Now</a>
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="openForm()">Buy
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offer Banner -->
+            <div class="row mt-5 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-12">
+                    <div class="bg-primary text-white rounded p-4 text-center">
+                        <h3 class="mb-3">Special Launch Offer!</h3>
+                        <p class="mb-3 fs-5">Get additional 5% discount on all newly arrived laptops when you purchase
+                            before this weekend.</p>
+                        <div class="offer-timer">Offer ends in: <span id="countdown">3 days 12:45:32</span></div>
+                        <a href="../contact.html" class="btn btn-light btn-lg mt-2">Grab This Offer Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- New Laptops End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5 border-start-0 border-end-0"
+            style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item">
+                        <a href="../index.html" class="p-0">
+                            <img src="../img/PPL_Laptops_logo.png" style="width: 150px; height: auto;" alt="Logo">
+                        </a>
+                        <p class="mb-4">Get a Premium Laptop Experience with PPL <br> Great Service in Pro Premium
+                            Laptop</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-2">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a href="../sales.html"><i class="fas fa-angle-right me-2"></i>Sales</a>
+                        <a href="../service.html"><i class="fas fa-angle-right me-2"></i>Services</a>
+                        <a href="../about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="../feature.html"><i class="fas fa-angle-right me-2"></i> Feature</a>
+                        <a href="../blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
+                        <a href="../contact.html"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-2">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Support</h4>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                        <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
+                        <a href="../FAQ.html"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-white mb-4">Contact Info</h4>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <p class="text-white mb-0">No 4, 4th floor, karthik complex, near Irani tea shop,
+                                Chintadripet, Chennai - 600002</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <a href="mailto:propremiumlaptop@gmail.com"  class="text-white mb-0">propremiumlaptop@gmail.com</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-phone-alt text-primary me-3"></i>
+                            <a href="tel:+91 8122038045" class="text-white mb-0">+91 8122038045</a>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fab fa-firefox-browser text-primary me-3"></i>
+                            <p class="text-white mb-0">propremiumlaptops.com</p>
+                        </div>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                    class="fab fa-facebook-f text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                    class="fab fa-twitter text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                    class="fab fa-instagram text-white"></i></a>
+                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i
+                                    class="fab fa-linkedin-in text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>Pro Premium Laptops</a>, All right
+                        reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+ <a href="https://wa.me/918122038045?text=Hello%20Pro%20Premium%20Laptop%20Team!%20I'm%20interested%20in%20your%20laptop%20service%20and%20repair%20solutions.%20Could%20you%20please%20share%20the%20available%20service%20options,%20pricing,%20and%20estimated%20repair%20time%3F%20Thank%20you!" 
+   class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp" rel="noopener">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/mail.js"></script>
+
+    <script>
+        // Countdown timer for special offer
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            const now = new Date();
+            const targetDate = new Date(now);
+            targetDate.setDate(now.getDate() + 3); // 3 days from now
+            targetDate.setHours(23, 59, 59, 0); // End of day
+
+            const timeDiff = targetDate - now;
+
+            if (timeDiff <= 0) {
+                countdownElement.textContent = "Offer Expired!";
+                return;
+            }
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            countdownElement.textContent = `${days} days ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    </script>
+</body>
+
+</html>
