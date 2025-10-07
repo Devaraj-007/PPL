@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -46,16 +47,10 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
-            <a href="../index.html" class="navbar-brand p-0 d-flex align-items-center">
-                <img src="../img/PPL_Laptops_logo_2.png" alt="Logo" class="ms-4">
-
-                <!-- Desktop View -->
-                <h1 class="text-dark ms-4 fs-4 d-none d-lg-block">Pro Premium Laptops</h1>
-
-                <!-- Mobile View -->
-                <h1 class="text-dark d-block d-lg-none">PPL</h1>
+            <a href="#" class="navbar-brand p-0 d-flex align-items-center">
+                <img src="../img/PPL_Laptops_logo.png" alt="Logo" class="ms-4">
+                <strong class="text-dark ms-4 fs-4">Pro Premium Laptop</strong>
             </a>
-
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -64,15 +59,15 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="../index.html" class="nav-item nav-link ">Home</a>
                     <a href="../about.html" class="nav-item nav-link">About</a>
-                    <a href="../Sales/newly_arrived_laptops.html" class="nav-item nav-link">Newly Arrived</a>
+                                        <a href="../Sales/newly_arrived_laptops.html" class="nav-item nav-link">Newly Arrived</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link active" data-bs-toggle="dropdown">
                             <span class="dropdown-toggle">Sales</span>
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="../Sales/Laptop.html" class="dropdown-item">Laptops</a>
-                            <a href="../Sales/Refurbished_Laptop.html" class="dropdown-item">Refurbished Laptops</a>
-                            <a href="#" class="dropdown-item">Tablets</a>
+                            <a href="#" class="dropdown-item">Laptops</a>
+                            <a href="Refurbished_Laptop.html" class="dropdown-item">Refurbished Laptops</a>
+                            <a href="Tablets.html" class="dropdown-item">Tablets</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -110,7 +105,7 @@
                 <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Sales</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="../sales.html">Sales</a></li>
-                    <li class="breadcrumb-item "><a class="active text-primary" href="#">Tablets</a></li>
+                    <li class="breadcrumb-item "><a class="active text-primary" href="#">Laptops</a></li>
                 </ol>
             </div>
         </div>
@@ -123,26 +118,18 @@
         <div class="popup">
             <button class="close-btn" onclick="closeForm()">&times;</button>
             <h2>Contact Us</h2>
-            <form id="popupContactForm" onsubmit="submitPopupForm(event)">
-                <input type="text" id="popupName" placeholder="Your Name" required>
-                <input type="email" id="popupEmail" placeholder="Your Email" required>
-                <input type="tel" id="popupPhone" placeholder="Your Phone" required>
-                <textarea id="popupMessage" rows="4" placeholder="Your Message" required></textarea>
+            <form onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Submit</button>
             </form>
-            <div id="successMessage" class="alert alert-success alert-dismissible fade show" style="display: none;">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-
-            <div id="errorMessage" class="alert alert-danger alert-dismissible fade show" style="display: none;">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <span id="errorText"></span>
-            </div>
         </div>
     </div>
     <!-- Popup form End -->
 
-    <!-- Tablets Start -->
+    <!-- New Laptops Start -->
     <div class="container-fluid service pb-5">
         <div class="container pb-5 mt-5">
 
@@ -150,75 +137,74 @@
                 <h1 class="display-5 mt-3">Our Products</h1>
             </div>
 
-            <!-- SAMSUNG Sections -->
+            <!-- HP Sections -->
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary mt-1">Samsung Tablets</h4>
+                <h4 class="text-primary mt-1">HP Laptops</h4>
             </div>
 
             <div class="row g-3">
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-5(SAMSUNG_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-1(HP).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Samsung Galaxy Tab S8 Ultra</h5>
-                            <p class="card-text">Samsung Galaxy Tab S8 Ultra 37.08 cm (14.6 inch) sAMOLED Display| RAM
-                                12 GB, ROM 256 GB Expandable| S Pen in-Box| Wi-Fi+ 5G Tablet| Graphite</p>
+                            <h5 class="card-title">HP 14s</h5>
+                            <p class="card-text">HP 14s, Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD, Windows
+                                11, Natural Silver, 1.46Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="card h-100">
-                        <img src="../img/product-5(SAMSUNG_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-1(HP).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Samsung Galaxy Tab S8 Ultra</h5>
-                            <p class="card-text">Samsung Galaxy Tab S8 Ultra 37.08 cm (14.6 inch) sAMOLED Display| RAM
-                                12 GB, ROM 256 GB Expandable| S Pen in-Box| Wi-Fi+ 5G Tablet| Graphite</p>
+                            <h5 class="card-title">HP 14s</h5>
+                            <p class="card-text">HP 14s, Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD, Windows
+                                11, Natural Silver, 1.46Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="card h-100">
-                        <img src="../img/product-5(SAMSUNG_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-1(HP).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Samsung Galaxy Tab S8 Ultra</h5>
-                            <p class="card-text">Samsung Galaxy Tab S8 Ultra 37.08 cm (14.6 inch) sAMOLED Display| RAM
-                                12 GB, ROM 256 GB Expandable| S Pen in-Box| Wi-Fi+ 5G Tablet| Graphite</p>
+                            <h5 class="card-title">HP 14s</h5>
+                            <p class="card-text">HP 14s, Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD, Windows
+                                11, Natural Silver, 1.46Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="card h-100">
-                        <img src="../img/product-5(SAMSUNG_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-1(HP).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Samsung Galaxy Tab S8 Ultra</h5>
-                            <p class="card-text">Samsung Galaxy Tab S8 Ultra 37.08 cm (14.6 inch) sAMOLED Display| RAM
-                                12 GB, ROM 256 GB Expandable| S Pen in-Box| Wi-Fi+ 5G Tablet| Graphite</p>
+                            <h5 class="card-title">HP 14s</h5>
+                            <p class="card-text">HP 14s, Intel Core i5 1235U, 16GB RAM, 512GB SSD, 14" FHD, Windows
+                                11, Natural Silver, 1.46Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Lenovo Sections -->
+            <!-- DELL Sections -->
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary mt-4">Lenovo Tablets</h4>
+                <h4 class="text-primary mt-4">DELL Laptops</h4>
             </div>
 
             <div class="row g-3">
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-6(LENOVO_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product (DELL-3470).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Lenovo Tab M11</h5>
-                            <p class="card-text">Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 GB RAM| 128 GB ROM| 11
-                                Inch Screen & 90 Hz, FHD Display| Quad Speakers with Dolby Atmos| Octa-Core Processor|
-                                13 MP Rear Camera</p>
+                            <h5 class="card-title">Dell Inspiron 15</h5>
+                            <p class="card-text">Dell Inspiron 15 3535, AMD Ryzen 5 7520U, 8GB RAM, 512GB SSD, 15.6"
+                                FHD, Windows 11, Silver, 1.63Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
@@ -226,12 +212,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-6(LENOVO_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product (DELL-3470).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Lenovo Tab M11</h5>
-                            <p class="card-text">Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 GB RAM| 128 GB ROM| 11
-                                Inch Screen & 90 Hz, FHD Display| Quad Speakers with Dolby Atmos| Octa-Core Processor|
-                                13 MP Rear Camera</p>
+                            <h5 class="card-title">Dell Inspiron 15</h5>
+                            <p class="card-text">Dell Inspiron 15 3535, AMD Ryzen 5 7520U, 8GB RAM, 512GB SSD, 15.6"
+                                FHD, Windows 11, Silver, 1.63Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
@@ -239,12 +224,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-6(LENOVO_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product (DELL-3470).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Lenovo Tab M11</h5>
-                            <p class="card-text">Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 GB RAM| 128 GB ROM| 11
-                                Inch Screen & 90 Hz, FHD Display| Quad Speakers with Dolby Atmos| Octa-Core Processor|
-                                13 MP Rear Camera</p>
+                            <h5 class="card-title">Dell Inspiron 15</h5>
+                            <p class="card-text">Dell Inspiron 15 3535, AMD Ryzen 5 7520U, 8GB RAM, 512GB SSD, 15.6"
+                                FHD, Windows 11, Silver, 1.63Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
@@ -252,32 +236,30 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-6(LENOVO_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product (DELL-3470).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Lenovo Tab M11</h5>
-                            <p class="card-text">Lenovo Tab M11 with Pen| Wi-Fi Connectivity| 8 GB RAM| 128 GB ROM| 11
-                                Inch Screen & 90 Hz, FHD Display| Quad Speakers with Dolby Atmos| Octa-Core Processor|
-                                13 MP Rear Camera</p>
+                            <h5 class="card-title">Dell Inspiron 15</h5>
+                            <p class="card-text">Dell Inspiron 15 3535, AMD Ryzen 5 7520U, 8GB RAM, 512GB SSD, 15.6"
+                                FHD, Windows 11, Silver, 1.63Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Apple Sections -->
+            <!-- ACER Sections -->
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary mt-4">Apple Tablets</h4>
+                <h4 class="text-primary mt-4">ACER Laptops</h4>
             </div>
 
             <div class="row g-3">
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-7(APPLE_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-3(ACER).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Apple iPad Air 11</h5>
-                            <p class="card-text">Apple iPad Air 11″ with M3 chip: Built for Apple Intelligence| Liquid
-                                Retina Display| 128GB, 12MP Front/Back Camera| Wi-Fi 6E| Touch ID| All-Day Battery| Life
-                                — Space Gray</p>
+                            <h5 class="card-title">Acer Swift Go 14</h5>
+                            <p class="card-text">Acer Swift Go 14, Intel Core i5 1335U, 16GB RAM, 512GB SSD, OLED 14",
+                                Windows 11, Silver, 1.32Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
@@ -285,12 +267,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-7(APPLE_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-3(ACER).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Apple iPad Air 11</h5>
-                            <p class="card-text">Apple iPad Air 11″ with M3 chip: Built for Apple Intelligence| Liquid
-                                Retina Display| 128GB, 12MP Front/Back Camera| Wi-Fi 6E| Touch ID| All-Day Battery| Life
-                                — Space Gray</p>
+                            <h5 class="card-title">Acer Swift Go 14</h5>
+                            <p class="card-text">Acer Swift Go 14, Intel Core i5 1335U, 16GB RAM, 512GB SSD, OLED 14",
+                                Windows 11, Silver, 1.32Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
@@ -298,12 +279,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-7(APPLE_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-3(ACER).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Apple iPad Air 11</h5>
-                            <p class="card-text">Apple iPad Air 11″ with M3 chip: Built for Apple Intelligence| Liquid
-                                Retina Display| 128GB, 12MP Front/Back Camera| Wi-Fi 6E| Touch ID| All-Day Battery| Life
-                                — Space Gray</p>
+                            <h5 class="card-title">Acer Swift Go 14</h5>
+                            <p class="card-text">Acer Swift Go 14, Intel Core i5 1335U, 16GB RAM, 512GB SSD, OLED 14",
+                                Windows 11, Silver, 1.32Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
@@ -311,32 +291,30 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-7(APPLE_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-3(ACER).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">Apple iPad Air 11</h5>
-                            <p class="card-text">Apple iPad Air 11″ with M3 chip: Built for Apple Intelligence| Liquid
-                                Retina Display| 128GB, 12MP Front/Back Camera| Wi-Fi 6E| Touch ID| All-Day Battery| Life
-                                — Space Gray</p>
+                            <h5 class="card-title">Acer Swift Go 14</h5>
+                            <p class="card-text">Acer Swift Go 14, Intel Core i5 1335U, 16GB RAM, 512GB SSD, OLED 14",
+                                Windows 11, Silver, 1.32Kg</p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- XIAOMI Sections -->
+            <!-- LENOVO Sections -->
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary mt-4">Xiaomi Tablets</h4>
+                <h4 class="text-primary mt-4">LENOVO Laptops</h4>
             </div>
 
             <div class="row g-3">
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-8(XIAOMI_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-4(LENOVO).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">XIAOMI Pad 7</h5>
-                            <p class="card-text">XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16") Display
-                                |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos
-                                |Quad Speakers |Wi-Fi 6e |Mirage Purple
+                            <h5 class="card-title">Lenovo IdeaPad Slim 3</h5>
+                            <p class="card-text">Lenovo IdeaPad Slim 3, AMD Ryzen 7 7730U, 16GB RAM, 1TB SSD, 15.6" FHD,
+                                Windows 11, Arctic Grey, 1.62Kg
                             </p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
@@ -345,12 +323,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-8(XIAOMI_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-4(LENOVO).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">XIAOMI Pad 7</h5>
-                            <p class="card-text">XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16") Display
-                                |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos
-                                |Quad Speakers |Wi-Fi 6e |Mirage Purple
+                            <h5 class="card-title">Lenovo IdeaPad Slim 3</h5>
+                            <p class="card-text">Lenovo IdeaPad Slim 3, AMD Ryzen 7 7730U, 16GB RAM, 1TB SSD, 15.6" FHD,
+                                Windows 11, Arctic Grey, 1.62Kg
                             </p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
@@ -359,12 +336,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-8(XIAOMI_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-4(LENOVO).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">XIAOMI Pad 7</h5>
-                            <p class="card-text">XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16") Display
-                                |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos
-                                |Quad Speakers |Wi-Fi 6e |Mirage Purple
+                            <h5 class="card-title">Lenovo IdeaPad Slim 3</h5>
+                            <p class="card-text">Lenovo IdeaPad Slim 3, AMD Ryzen 7 7730U, 16GB RAM, 1TB SSD, 15.6" FHD,
+                                Windows 11, Arctic Grey, 1.62Kg
                             </p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
@@ -373,12 +349,11 @@
 
                 <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="card h-100">
-                        <img src="../img/product-8(XIAOMI_TAB).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
+                        <img src="../img/product-4(LENOVO).webp" class="card-img-top h-75 mt-2 mb-2" alt="Laptop">
                         <div class="card-body">
-                            <h5 class="card-title">XIAOMI Pad 7</h5>
-                            <p class="card-text">XIAOMI Pad 7 |Qualcomm Snapdragon 7+ Gen 3 |28.35cm(11.16") Display
-                                |8GB, 128GB |3.2K CrystalRes Display |HyperOS 2 |68 Billion+ Colours |Dolby Vision Atmos
-                                |Quad Speakers |Wi-Fi 6e |Mirage Purple
+                            <h5 class="card-title">Lenovo IdeaPad Slim 3</h5>
+                            <p class="card-text">Lenovo IdeaPad Slim 3, AMD Ryzen 7 7730U, 16GB RAM, 1TB SSD, 15.6" FHD,
+                                Windows 11, Arctic Grey, 1.62Kg
                             </p>
                             <a href="../contact.html" class="btn btn-primary">Contact Us</a>
                         </div>
@@ -388,7 +363,7 @@
 
         </div>
     </div>
-    <!-- Tablets End -->
+    <!-- New Laptops End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -434,11 +409,11 @@
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fas fa-envelope text-primary me-3"></i>
-                            <a href="mailto:propremiumlaptop@gmail.com"  class="text-white mb-0">propremiumlaptop@gmail.com</a>
+                            <p class="text-white mb-0">ppl@example.com</p>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-phone-alt text-primary me-3"></i>
-                            <a href="tel:+91 8122038045" class="text-white mb-0">+91 8122038045</a>
+                            <p class="text-white mb-0">+91 8056179393</p>
                         </div>
                         <div class="d-flex align-items-center mb-4">
                             <i class="fab fa-firefox-browser text-primary me-3"></i>
@@ -473,11 +448,7 @@
             </div>
         </div>
     </div>
- <a href="https://wa.me/918122038045?text=Hello%20Pro%20Premium%20Laptop%20Team!%20I'm%20interested%20in%20your%20laptop%20service%20and%20repair%20solutions.%20Could%20you%20please%20share%20the%20available%20service%20options,%20pricing,%20and%20estimated%20repair%20time%3F%20Thank%20you!" 
-   class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp" rel="noopener">
-   <i class="fab fa-whatsapp"></i>
-</a>
-
+    <!-- Copyright End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
@@ -496,7 +467,6 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-    <script src="../js/mail.js"></script>
 </body>
 
 </html>
